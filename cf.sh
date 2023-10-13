@@ -573,15 +573,23 @@ sleep 1
 }
 
 function cekdomain(){
+tempikpink(){
+echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e  "${tyblue}│              \033[1;37mTERIMA KASIH                ${tyblue}│${NC}"
+echo -e  "${tyblue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${tyblue}│${NC}"
+echo -e  "${tyblue}│                \033[1;37mDARI YADDY TAMPAN MAX               ${tyblue}│${NC}"
+echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
+echo ""
+}
 clear
+apt install jq curl -y
 currentdomain=$(cat /etc/xray/domain)
     if [ -f "/etc/xray/domain" ]; then
         echo "Domainmu saat ini adalah ${currentdomain} "
     else
         echo "Belum ada domain terpasang di vps ini "
     fi
-yellow "Add Domain for vmess/vless/trojan dll"
-echo " "
+echo ""
 echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
 echo ""
 echo "jika kamu sudah punya domain sendiri, pilih nomer 1"
@@ -596,29 +604,49 @@ echo -e "     \e[1;32m1)\e[0m Enter your Subdomain"
 echo -e "     \e[1;32m2)\e[0m Use a custom Subdomain"
 echo -e "     \e[1;32m3)\e[0m Skip , Saya tidak ingin mengganti Subdomain yg sekarang"
 echo -e "   ------------------------------------"
+sleep 5
+clear
+echo -e ""
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}│ \033[1;37mPlease select a your Choice to Set Domain${tyblue}│${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}│  [ 1 ]  \033[1;37mGunakan Domain Sendiri/Domainmu       ${NC}"
+echo -e "${tyblue}│  "                                        
+echo -e "${tyblue}│  [ 2 ]  \033[1;37mGunakan Domain Dari Scriptnya      ${NC}"
+echo -e "${tyblue}│     "                                     
+echo -e "${tyblue}│  [ 3 ]  \033[1;37mSkip , Saya tidak ingin mengganti Subdomain yg sekarang"       ${NC}"
+echo -e "${tyblue}│  "                                        
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 read -p "   Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
     if [[ $host == "1" ]]; then
+        echo -e "   \e[1;32mPlease Enter Your Subdomain $NC"
         read -rp "Input DOMAIN Kamu : " -e domainmu
         if [ -z ${domainmu} ]; then
             echo -e " Anda belum memasukkan domain! Then a random domain will be created"
             randomsubdomain
             notif_addhost
             rm -rf cf.sh
+            tempikpink
         else
 	        echo "$domainmu" > /etc/xray/domain
+            echo "$domainmu" > /root/domain
             echo "IP=$domainmu" > /var/lib/yaddykakkoii/ipvps.conf
             echo "IP=$domainmu" >> /var/lib/kyt/ipvps.conf
+            tempikpink
         fi
         clear
     elif [[ $host == "2" ]]; then
         pointing
         rm -rf cf.sh
         clear
+        tempikpink
     elif [[ $host == "3" ]]; then
         echo " skipp gaess "
         rm -rf cf.sh
         clear
+        tempikpink
     else
         echo -e "Random Subdomain/Domain is used"
         sleep 3
@@ -626,6 +654,7 @@ echo ""
         notif_addhost
         rm -rf cf.sh
         clear
+        tempikpink
     fi
 }
 cekdomain
