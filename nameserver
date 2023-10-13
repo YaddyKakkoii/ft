@@ -1,0 +1,22 @@
+#!/bin/sh
+
+setup_dnstt() {
+	cd /root
+    REPOS="https://raw.githubusercontent.com/YaddyKakkoii/ft/main/"
+#	rm -rf *
+	mkdir -p /etc/slowdns
+	cd /etc/slowdns
+	wget -O dnstt-server "${REPOS}dnstt-server"
+	chmod +x dnstt-server
+	wget -O dnstt-client "${REPOS}dnstt-client"
+	chmod +x dnstt-client
+	./dnstt-server -gen-key -privkey-file server.key -pubkey-file server.pub
+	chmod +x *
+	wget -O /etc/systemd/system/client.service "${REPOS}client"
+	wget -O /etc/systemd/system/server.service "${REPOS}server"
+	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/client.service 
+	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/server.service 
+	cd /root
+}
+
+setup_dnstt
