@@ -50,12 +50,12 @@ apt install jq curl -y
 clear
 
 read -rp "Sub Domain (Contoh: Myrid): " sub
-DOMAIN=myridtunnel.my.id
+DOMAIN=xdg-boost.my.id
 echo $sub > /root/cfku
-SUB_DOMAIN=${sub}.myridtunnel.my.id
+SUB_DOMAIN=${sub}.xdg-boost.my.id
 CF_ID=ziexyuan@gmail.com
 CF_KEY=2fbf0739b65e1e4b6de396b11a9693fc6aa56
-echo ".myridtunnel.my.id" > /root/domain
+echo ".xdg-boost.my.id" > /root/domain
 echo $SUB_DOMAIN > /root/domain
 
 set -euo pipefail
