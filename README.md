@@ -85,7 +85,7 @@ apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && re
 
 html
 ```
-apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q "https://raw.githubusercontent.com/YaddyKakkoii/ft/main/ft" && chmod +x ft;./ft && rm ft && echo "berhasil install "
+apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -qO install "https://raw.githubusercontent.com/YaddyKakkoii/zxc/main/setup.sh" && chmod +x install;./install && rm install && echo "berhasil install "
 ```
 
 Telegram :
